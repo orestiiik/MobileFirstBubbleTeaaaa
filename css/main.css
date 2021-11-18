@@ -1,0 +1,153 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #e34a6f;
+}
+h1 {
+  font-size: 85px;
+  margin-top: 0px;
+  color: #3cbbb1;
+  font-family: "Market-web";
+  letter-spacing: 10px;
+  margin-bottom: 0px;
+  text-shadow: 1px 1px 5px #eeeeee;
+}
+h2 {
+  color: #fff;
+  font-size: 35px;
+  font-family: "Cocon-Regular-Font";
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+.review {
+  position: relative;
+  font-size: 22px;
+  width: 30%;
+  margin-top: 90px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: "Futura";
+}
+.bubble {
+  width: 100%;
+}
+.star {
+  height: 35px;
+  width: auto;
+}
+.stars {
+  position: absolute;
+  right: 5%;
+  top: -45px;
+}
+.review h4 {
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  bottom: -55px;
+}
+.shadow {
+  -webkit-box-shadow: -5px 5px 4px 1px #000000;
+  box-shadow: -5px 5px 4px 1px #000000;
+}
+.review p {
+  position: absolute;
+  color: #3cbbb1;
+  left: 50%;
+  top: 5px;
+  transform: translate(-50%, 0%);
+  width: 80%;
+}
+.hero {
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.button {
+  background: #3cbbb1;
+  font-size: 32px;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 0px 28px;
+  font-family: "Cocon-Regular-Font";
+}
+.footer {
+position:absolute;
+  display: flex;
+  bottom: 0px;
+  height: 70px;
+  background: #3cbbb1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Futura";
+}
+.footer i {
+  position: absolute;
+  right: 14px;
+  font-size: 40px;
+}
+
+@font-face {
+  font-family: "Market-web";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Market.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cocon-Regular-Font";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Cocon-Regular-Font.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Futura";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/futura-pt-book.otf");
+  font-display: swap;
+}
+
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        padding-top: 5px;
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .review .star {
+        height: 20px;
+    }
+    .review .bubble {
+        height: 140%;
+    }
+    .review {
+        width: 100%;
+        font-size: 17px;
+        margin-bottom: 10%;
+    }
+    .stars {
+        top: -25px;
+    }
+    .review h4 {
+        bottom: -80%;
+    }
+    .button {
+        width: 65%;
+        font-size: 25px;
+        margin: 8px 0px;
+    }
+    .footer {
+        bottom: auto;
+    }
+}

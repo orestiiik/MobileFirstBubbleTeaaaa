@@ -245,6 +245,7 @@
     }
     .carousel__slide img {
       height: 90%;
+      width: auto;
     }
     .footer {
       position: absolute;

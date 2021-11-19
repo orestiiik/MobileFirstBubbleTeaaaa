@@ -54,7 +54,7 @@
   }
   * {
     box-sizing: border-box;
-    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-color: transparent transparent;
     scrollbar-width: 0px;
   }
   

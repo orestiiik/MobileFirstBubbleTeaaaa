@@ -1,265 +1,261 @@
 @keyframes tonext {
-    75% {
-      left: 0;
-    }
-    95% {
-      left: 100%;
-    }
-    98% {
-      left: 100%;
-    }
-    99% {
-      left: 0;
-    }
-  }
-  
-  @keyframes tostart {
-    75% {
-      left: 0;
-    }
-    95% {
-      left: -300%;
-    }
-    98% {
-      left: -300%;
-    }
-    99% {
-      left: 0;
-    }
-  }
-  
-  @keyframes snap {
-    96% {
-      scroll-snap-align: center;
-    }
-    97% {
-      scroll-snap-align: none;
-    }
-    99% {
-      scroll-snap-align: none;
-    }
-    100% {
-      scroll-snap-align: center;
-    }
-  }
-  
-  body {
-      text-align: center;
-  }
-  section {
-    max-width: 37.5rem;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
-  }
-  * {
-    box-sizing: border-box;
-    scrollbar-color: transparent transparent;
-    scrollbar-width: 0px;
-  }
-  
-  *::-webkit-scrollbar {
-    width: 0;
-  }
-  
-  *::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    background: transparent;
-    border: none;
-  }
-  
-  * {
-    -ms-overflow-style: none;
-  }
-  
-  ol, li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .carousel {
-    position: relative;
-    padding-top: 35%;
-    filter: drop-shadow(0 0 10px #0003);
-    perspective: 100px;
-  }
-  
-  .carousel__viewport {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+  75% {
     left: 0;
-    display: flex;
-    overflow-x: scroll;
-    counter-reset: item;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
   }
-  
-  .carousel__slide {
-    position: relative;
-    flex: 0 0 100%;
-    width: 100%;
-  }  
-  .carousel__slide img {
-      position: relative;
-      height: 75%;
+  95% {
+    left: 100%;
   }
-  .carousel__snapper {
-    position: absolute;
-    top: 0;
+  98% {
+    left: 100%;
+  }
+  99% {
     left: 0;
-    width: 100%;
-    height: 100%;
+  }
+}
+
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes snap {
+  96% {
     scroll-snap-align: center;
   }
-  
-  @media (hover: hover) {
-    .carousel__snapper {
-      animation-name: tonext, snap;
-      animation-timing-function: ease;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-    }
-  
-    .carousel__slide:last-child .carousel__snapper {
-      animation-name: tostart, snap;
-    }
+  97% {
+    scroll-snap-align: none;
   }
-  
-  @media (prefers-reduced-motion: reduce) {
-    .carousel__snapper {
-      animation-name: none;
-    }
+  99% {
+    scroll-snap-align: none;
   }
-  
-  .carousel:hover .carousel__snapper,
-  .carousel:focus-within .carousel__snapper {
-    animation-name: none;
+  100% {
+    scroll-snap-align: center;
   }
-  
-  .carousel__navigation {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-  }
-  
-  .carousel__navigation-list,
-  .carousel__navigation-item {
-    display: inline-block;
-  }
-  
-  .carousel__navigation-button {
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #333;
-    background-clip: content-box;
-    border: 0.25rem solid transparent;
-    border-radius: 50%;
-    font-size: 0;
-    transition: transform 0.1s;
-  }
-  
-  .carousel::before,
-  .carousel::after,
-  .carousel__prev,
-  .carousel__next {
-    position: absolute;
-    top: 0;
-    margin-top: 37.5%;
-    width: 5rem;
-    height: 6rem;
-    transform: translateY(-50%);
-    font-size: 0;
-    outline: 0;
-  }
-  
-  .carousel::before,
-  .carousel__prev {
-    left: -1rem;
-  }
-  
-  .carousel::after,
-  .carousel__next {
-    right: -1rem;
-  }
-  
-  .carousel::before,
-  .carousel::after {
-    content: '';
-    z-index: 1;
-    background-size: 5rem 5rem;
-    background-repeat: no-repeat;
-    text-align: center;
-    pointer-events: none;
-  }
-  
-  .carousel::before {
-    background-image: url("/images/arrow.png");
-  }
-  
-  .carousel::after {
-    background-image: url("/images/arrowRight.png");
-  }
-  .button {
-      width: 320px;
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, -100%);
-  }
-  .carousel__navigation-button {
-    display: none;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #333;
-    background-clip: content-box;
-    border: 0.25rem solid transparent;
-    border-radius: 50%;
-    font-size: 0;
-    transition: transform 0.1s;
+}
+
+body {
+  text-align: center;
+}
+section {
+  max-width: 37.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+* {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  position: relative;
+  padding-top: 35%;
+  filter: drop-shadow(0 0 10px #0003);
+  perspective: 100px;
+}
+
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  counter-reset: item;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+}
+.carousel__slide img {
+  position: relative;
+  height: 75%;
+}
+.carousel__snapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
   }
 
-  @media only screen and (max-width: 600px) {
-    .carousel::before,
-    .carousel::after {
-      background-size: 0;
-    }
-    .carousel {
-      width: 90%;
-      height: 45vh;
-      padding-top: 10px;
-    }
-    .button {
-      width: 200px;
-      margin-bottom: 30px;
-      margin-top: 30px;
-      transform: translate(-50%, -10%);
-    }
-    .carousel__slide img {
-      height: 90%;
-      width: auto;
-    }
-    .footer {
-      position: absolute;
-      bottom: 0;
-    }
-    .carousel__navigation-button {
-      display: inline;
-    }
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
   }
-  @media only screen and (max-width: 360px) {
-    h1 {
-      font-size: 40px;
-    }
-    .carousel {
-      height: 40vh;
-    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__snapper {
+    animation-name: none;
   }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+  animation-name: none;
+}
+
+.carousel__navigation {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline-block;
+}
+
+.carousel__navigation-button {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #333;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+  font-size: 0;
+  transition: transform 0.1s;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 0;
+  margin-top: 37.5%;
+  width: 5rem;
+  height: 6rem;
+  transform: translateY(-50%);
+  font-size: 0;
+  outline: 0;
+}
+
+.carousel::before,
+.carousel__prev {
+  left: -1rem;
+}
+
+.carousel::after,
+.carousel__next {
+  right: -1rem;
+}
+
+.carousel::before,
+.carousel::after {
+  content: "";
+  z-index: 1;
+  background-size: 5rem 5rem;
+  background-repeat: no-repeat;
+  text-align: center;
+  pointer-events: none;
+}
+
+.carousel::before {
+  background-image: url("/images/arrow.png");
+}
+
+.carousel::after {
+  background-image: url("/images/arrowRight.png");
+}
+.button {
+  width: 320px;
+  margin: 0 auto;
+}
+.carousel__navigation-button {
+  display: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #333;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+  font-size: 0;
+  transition: transform 0.1s;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel::before,
+  .carousel::after {
+    background-size: 0;
+  }
+  .carousel {
+    width: 90%;
+    height: 60vh;
+    padding-top: 10px;
+  }
+  .button {
+    width: 200px;
+    margin: 30px auto;
+  }
+  .carousel__slide img {
+    height: 90%;
+    width: auto;
+  }
+  .footer {
+
+  }
+  .carousel__navigation-button {
+    display: inline;
+  }
+}
+@media only screen and (max-width: 360px) {
+  h1 {
+    font-size: 40px;
+  }
+  .carousel {
+    height: 40vh;
+  }
+}

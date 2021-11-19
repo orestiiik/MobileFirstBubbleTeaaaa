@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>THE BUBBLE TEAAAA - Special menu</title>
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/specialmenu.css" />
+    <link rel="stylesheet" href="/css/hamburger.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -16,44 +18,80 @@
     />
   </head>
   <body>
-    <h1>Special menu</h1>
-    <section class="carousel" aria-label="Gallery">
-      <ol class="carousel__viewport">
-        <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <img src="/images/strawberry.png" alt="Strawberry bubble tea" />
-          <a href="#carousel__slide3" class="carousel__prev"
-            >Go to last slide</a
-          >
-          <a href="#carousel__slide2" class="carousel__next"
-            >Go to next slide</a
-          >
-        </li>
-        <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <img src="/images/tarococo.png" alt="Tarococo bubble tea" />
-          <a href="#carousel__slide1" class="carousel__prev"
-            >Go to previous slide</a
-          >
-          <a href="#carousel__slide3" class="carousel__next"
-            >Go to next slide</a
-          >
-        </li>
-        <li id="carousel__slide3" tabindex="0" class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <img src="/images/mango.png" alt="Mango bubble tea" />
-          <a href="#carousel__slide2" class="carousel__prev"
-            >Go to previous slide</a
-          >
-          <a href="#carousel__slide1" class="carousel__next"
-            >Go to next slide</a
-          >
-        </li>
-      </ol>
+    <div class="hamburger">
+      <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+      <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+      </label>
+      <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/menu.html">Menu</a></li>
+          <li><a href="/specialmenu.html">Special menu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hero">
+      <h1>Special menu</h1>
+      <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+          <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <img src="/images/strawberry.png" alt="Strawberry bubble tea" />
+            <a href="#carousel__slide3" class="carousel__prev"
+              >Go to last slide</a
+            >
+            <a href="#carousel__slide2" class="carousel__next"
+              >Go to next slide</a
+            >
+          </li>
+          <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <img src="/images/tarococo.png" alt="Tarococo bubble tea" />
+            <a href="#carousel__slide1" class="carousel__prev"
+              >Go to previous slide</a
+            >
+            <a href="#carousel__slide3" class="carousel__next"
+              >Go to next slide</a
+            >
+          </li>
+          <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <img src="/images/mango.png" alt="Mango bubble tea" />
+            <a href="#carousel__slide2" class="carousel__prev"
+              >Go to previous slide</a
+            >
+            <a href="#carousel__slide1" class="carousel__next"
+              >Go to next slide</a
+            >
+          </li>
+        </ol>
+        <aside class="carousel__navigation">
+          <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide1" class="carousel__navigation-button"
+                >Go to slide 1</a
+              >
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide2" class="carousel__navigation-button"
+                >Go to slide 2</a
+              >
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide3" class="carousel__navigation-button"
+                >Go to slide 3</a
+              >
+            </li>
+          </ol>
+        </aside>
+      </section>
       <div class="button shadow">SEE INGREDIENTS</div>
-    </section>
+    </div>
     <div class="footer">
-      <span>Some text about the comapny</span>
+      <span>Ny Munkegade 2a, 8000 Aarhus, Denmark</span>
       <i class="fab fa-instagram"></i>
     </div>
   </body>

@@ -212,7 +212,53 @@
   .button {
       width: 320px;
       position: absolute;
-      bottom: 50px;
       left: 50%;
-      transform: translate(-50%, 0%);
+      transform: translate(-50%, -100%);
+  }
+  .carousel__navigation-button {
+    display: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .carousel::before,
+    .carousel::after {
+      background-size: 0;
+    }
+    .carousel {
+      width: 90%;
+      height: 45vh;
+      padding-top: 10px;
+    }
+    .button {
+      width: 200px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      transform: translate(-50%, -10%);
+    }
+    .carousel__slide img {
+      height: 90%;
+    }
+    .footer {
+      position: absolute;
+      bottom: 0;
+    }
+    .carousel__navigation-button {
+      display: inline;
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    h1 {
+      font-size: 40px;
+    }
+    .carousel {
+      height: 40vh;
+    }
   }
